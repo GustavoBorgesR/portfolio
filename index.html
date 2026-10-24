@@ -168,6 +168,14 @@ dialog img{max-height:84vh}
 @media(max-width:900px){.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.shots{grid-template-columns:1fr}.shots figure:last-child:nth-child(odd){grid-column:auto}}
 @media(max-width:800px){header{display:none}}
 @media(max-width:600px){.cards,.steps{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr 1fr;gap:8px}.metrics b{font-size:1.3rem}#cookie{right:84px}}
+.metrics{display:flex;flex-direction:column;gap:10px}
+.metrics>div{display:grid;grid-template-columns:104px 1fr;gap:12px;align-items:baseline}
+.metrics b{display:block;white-space:nowrap}
+.metrics span{font-size:.95rem;line-height:1.35}
+.metrics{gap:6px}
+.metrics>div{grid-template-columns:92px 1fr;align-items:center;gap:10px;min-height:38px}
+.metrics b{font-size:1.35rem;line-height:1}
+.metrics span{font-size:.92rem;line-height:1.3}
 </style>
 <script>
 var EXT=['jpg','jpeg','png','webp','JPG','JPEG','PNG','WEBP'];
@@ -211,7 +219,7 @@ function imgNext(i){var b=i.dataset.b||i.getAttribute('src').replace(/\.[^.\/]+$
 <span class="tag">Advogado Previdenciário | RJ</span>
 <h3>R$ 9,77 de retorno para cada R$ 1 investido</h3>
 <p>Para cada R$ 1 investido, voltaram R$ 9,77 em honorários contratados, e o número chega a R$ 19,55 com os 2 contratos em análise.</p>
-<div class="metrics"><div><b>R$ 199</b><span>custo por contrato (R$ 99 com os 2 em análise)</span></div><div><b>36</b><span>leads</span></div><div><b>4</b><span>contratos (2 aprovados e 2 em análise)</span></div></div>
+<div class="metrics"><div><b>R$ 199</b><span>custo por contrato</span></div><div><b>36</b><span>leads</span></div><div><b>4</b><span>contratos</span></div></div>
 </article>
 <article class="case">
 <div class="print"><span>Print do relatório do case</span><img src="NovoCase3.jpg" alt="Print do relatório do case" loading="lazy" decoding="async" onerror="imgNext(this)"></div>
