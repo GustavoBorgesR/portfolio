@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gustavo Borges | Tráfego para Advogados</title>
+<meta property="og:title" content="Gustavo Borges | Tráfego para Advogados">
+<meta name="description" content="Gustavo Borges, gestor de tráfego para advogados: campanhas no Meta Ads e Google Ads, acompanhamento de cada lead até o WhatsApp e relatório semanal com custo por contrato.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<!--
+  IMAGENS (todas na MESMA pasta do index.html, com estes nomes exatos, em .jpg):
+  foto.jpg ......... sua foto
+  NovoCase1.jpg, NovoCase2.jpg, NovoCase3.jpg ... prints dos cases
+  ndepo1.jpg ... ndepo9.jpg ... prints dos depoimentos (carrossel)
+  resultado1.jpg ... resultado11.jpg ... prints das campanhas (Google: 1,2,3,4,11 | Meta: 5 a 10)
+-->
+<style>
+:root{--paper:#F3F5F8;--card:#fff;--ink:#101C2E;--muted:#475467;--line:#D9DFE8;--blue:#2F5BFF;--green:#0E9F6E;
+--display:'Bricolage Grotesque',system-ui,sans-serif;--body:'Instrument Sans',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:72px 0;scroll-margin-top:72px}
+h1,h2,h3{font-family:var(--display);line-height:1.12;letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:700;margin-bottom:36px;max-width:20ch}
+header{position:sticky;top:0;z-index:5;background:rgba(243,245,248,.93);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:var(--display);font-weight:800;font-size:1.15rem;text-decoration:none}
+nav{display:flex;gap:22px;font-size:.95rem;font-weight:500}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:600;padding:14px 26px;border-radius:10px;transition:transform .15s,background .15s}
+.btn:hover{background:#1F45E0;transform:translateY(-2px)}
+.btn.wa{background:#25D366;color:#06260F}.btn.wa:hover{background:#1FB958}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}.btn.ghost:hover{background:var(--ink);color:#fff}
+.hero{padding:68px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,4.8vw,3.6rem);font-weight:800}
+.lead{margin:24px 0 32px;max-width:48ch;color:var(--muted);font-size:1.15rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.panel{background:var(--ink);color:#fff;border-radius:18px;padding:26px;box-shadow:0 24px 48px -24px rgba(16,28,46,.5)}
+.panel-top{font-size:.85rem;color:#9FB0C8;margin-bottom:6px}
+.panel .big{font-family:var(--display);font-size:3.2rem;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+.panel .sub{color:#6EE7B7;font-weight:500}
+.bars{display:flex;align-items:flex-end;gap:8px;height:110px;margin:20px 0 10px}
+.bars i{flex:1;background:#2F5BFF;border-radius:4px 4px 0 0;height:0;animation:grow .9s cubic-bezier(.2,.8,.2,1) forwards}
+.bars i:nth-child(1){--h:26%}.bars i:nth-child(2){--h:38%;animation-delay:.05s}.bars i:nth-child(3){--h:34%;animation-delay:.1s}
+.bars i:nth-child(4){--h:54%;animation-delay:.15s}.bars i:nth-child(5){--h:62%;animation-delay:.2s}.bars i:nth-child(6){--h:78%;animation-delay:.25s}
+.bars i:nth-child(7){--h:100%;animation-delay:.3s;background:#6EE7B7}
+@keyframes grow{to{height:var(--h)}}
+.panel-foot{display:flex;justify-content:space-between;gap:12px;font-size:.85rem;color:#9FB0C8}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:28px}
+.card h3{font-size:1.25rem;margin-bottom:10px}.card p{color:var(--muted);font-size:1rem}
+.cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:20px}
+.case{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:14px}
+.case .tag{font-size:.9rem;color:var(--muted)}.case h3{font-size:1.2rem}.case p{color:var(--muted);font-size:1rem}
+.metrics{display:flex;gap:28px;padding-top:14px;border-top:1px solid var(--line);margin-top:auto}
+.metrics b{display:block;font-family:var(--display);font-size:1.8rem;color:var(--green);line-height:1.1}
+.metrics span{font-size:.85rem;color:var(--muted)}
+.print{position:relative;aspect-ratio:16/10;background:var(--line);border-radius:10px;overflow:hidden;display:grid;place-items:center;color:var(--muted);font-size:.85rem;text-align:center;padding:12px}
+.print img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;background:#fff}
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.shots figure:last-child:nth-child(odd){grid-column:1/-1}
+.shots .print{aspect-ratio:auto;display:block;padding:0;background:#fff;border:1px solid var(--line)}
+.shots .print img{position:static;display:block;width:100%;height:auto}
+.shots .print:has(img) span{display:none}
+.shots .print:not(:has(img)){aspect-ratio:4/1;display:grid}
+@media(max-width:800px){.shots{grid-template-columns:1fr}}
+.print:has(img){cursor:zoom-in}
+dialog{border:none;background:transparent;max-width:95vw;max-height:95vh;margin:auto}
+dialog::backdrop{background:rgba(16,28,46,.88)}
+dialog img{display:block;max-width:95vw;max-height:92vh;border-radius:8px;background:#fff}
+.wa-float{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:9;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 8px 22px -6px rgba(0,0,0,.4);transition:transform .15s,background .15s}
+.wa-float:hover{background:#1FB958;transform:scale(1.07)}
+.wa-float svg{width:32px;height:32px;fill:#fff}
+@media(max-width:800px){.wa-float{width:56px;height:56px;right:16px}}
+@media(prefers-reduced-motion:reduce){.wa-float{transition:none}}
+.strip{padding:0 0 28px}
+.strip-title{font-size:.95rem;color:var(--muted);margin-bottom:14px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px;padding:24px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats b{display:block;font-family:var(--display);font-size:2rem;line-height:1.1}
+.stats span{font-size:.9rem;color:var(--muted)}
+figure figcaption{font-size:.92rem;color:var(--muted);margin-top:10px}
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:28px}
+blockquote{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:12px;padding:24px;font-family:var(--display);font-size:1.2rem;line-height:1.3}
+blockquote cite{display:block;margin-top:12px;font-family:var(--body);font-size:.88rem;font-style:normal;color:var(--muted)}
+.metrics{flex-wrap:wrap}
+.case .print{aspect-ratio:auto;display:block;padding:0;background:#fff;border:1px solid var(--line)}
+.case .print img{position:static;display:block;width:100%;height:auto}
+.case .print:has(img) span{display:none}
+.case .print:not(:has(img)){aspect-ratio:16/10;display:grid}
+.depos{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.depos::-webkit-scrollbar{display:none}
+.depos .print{flex:0 0 calc((100% - 40px)/3);scroll-snap-align:start;aspect-ratio:9/19;background:#E9EDF2;border:1px solid var(--line)}
+.depos img{object-fit:contain;object-position:center}
+.car-nav{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:22px}
+.car-nav button{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--ink);background:transparent;color:var(--ink);font-size:1.5rem;line-height:1;cursor:pointer;transition:background .15s,color .15s}
+.car-nav button:hover:not(:disabled){background:var(--ink);color:#fff}
+.car-nav button:disabled{opacity:.3;cursor:default}
+#pos{font-size:.92rem;color:var(--muted);min-width:90px;text-align:center}
+@media(max-width:800px){.depos .print{flex-basis:84%}}
+@media(prefers-reduced-motion:reduce){.depos{scroll-behavior:auto}}
+.steps{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+.steps li{counter-increment:s;border-top:3px solid var(--ink);padding-top:18px}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:800;font-size:1.6rem;color:var(--blue);display:block;margin-bottom:6px}
+.steps h3{font-size:1.15rem;margin-bottom:6px}.steps p{color:var(--muted);font-size:1rem}
+.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:48px;align-items:start}
+.about .print{aspect-ratio:1;border-radius:18px}.about .print img{object-position:50% 20%}
+.about p{margin-bottom:16px;max-width:60ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips span{border:1px solid var(--line);background:var(--card);padding:6px 14px;border-radius:99px;font-size:.9rem}
+.about h3{font-size:1.05rem;margin-top:24px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px}
+summary{cursor:pointer;padding:20px 24px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--blue)}
+details[open] summary::after{content:"−"}
+details p{padding:0 24px 22px;color:var(--muted);max-width:70ch}
+.contact{background:var(--ink);color:#fff;border-radius:22px;padding:56px 40px;text-align:center}
+.contact h2{margin:0 auto 14px;max-width:20ch}.contact p{color:#B6C3D6;margin-bottom:28px}
+.alt{margin-top:22px;font-size:.95rem;color:#B6C3D6}.alt a{margin:0 8px}
+footer{padding:32px 0 48px;color:var(--muted);font-size:.9rem;text-align:center}
+@media(max-width:980px){nav{display:none}}
+@media(max-width:800px){.hero .wrap,.about{grid-template-columns:1fr}nav{display:none}section{padding:60px 0}.contact{padding:44px 22px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bars i{animation:none;height:var(--h)}.btn{transition:none}}
+
+.cards{grid-template-columns:repeat(3,1fr)}
+.ico{width:30px;height:30px;stroke:var(--blue);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:start}
+.metrics b{font-size:1.6rem}
+.steps{grid-template-columns:repeat(5,1fr);gap:20px}
+.steps p{font-size:.95rem}
+.need{margin-top:36px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:12px;padding:24px}
+.need h3{font-size:1.15rem;margin-bottom:6px}.need p{color:var(--muted);max-width:75ch}
+.cta{text-align:center;margin-top:36px}
+.note{font-size:.88rem;color:var(--muted);margin-top:12px}
+.gt{font-size:1.3rem;margin:8px 0 18px}
+.shots+.gt{margin-top:44px}
+.panel .mini{width:84px;height:84px;border-radius:50%;object-fit:cover;object-position:50% 20%;margin-bottom:16px;border:3px solid rgba(255,255,255,.25)}
+.panel .sub{font-size:1rem;margin-top:6px;line-height:1.4}
+.logo{display:flex;flex-direction:column;line-height:1.15;margin-right:12px}
+.logo small{font-family:var(--body);font-weight:500;font-size:.78rem;color:var(--muted)}
+header .wrap{gap:20px}
+header .btn{padding:10px 18px;font-size:.95rem}
+nav{gap:18px;font-size:.92rem}
+.about p{color:var(--muted)}
+.alt{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.alt a{margin:0;padding:10px 20px;border:1.5px solid rgba(255,255,255,.55);border-radius:10px;color:#fff;text-decoration:none;font-weight:600}
+.alt a:hover{background:#fff;color:var(--ink)}
+.linkbtn{background:none;border:none;color:var(--muted);text-decoration:underline;font:inherit;cursor:pointer;margin-top:8px}
+dialog img{max-height:84vh}
+.zbtn{position:fixed;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;border:none;background:rgba(255,255,255,.92);font-size:1.7rem;line-height:1;cursor:pointer;z-index:2}
+.zprev{left:14px}.znext{right:14px}
+.zcap{position:fixed;left:0;right:0;bottom:14px;text-align:center;color:#fff;font-size:.95rem;padding:0 76px}
+#priv{max-width:640px;width:92vw;background:var(--card);color:var(--ink);border-radius:16px;padding:32px;margin:auto}
+#priv h2{font-size:1.5rem;margin-bottom:14px;max-width:none}
+#priv p{margin-bottom:12px;font-size:.98rem;color:var(--muted)}
+#priv button{margin-top:8px;cursor:pointer;border:none}
+#cookie{position:fixed;left:16px;right:16px;bottom:16px;max-width:560px;z-index:8;background:var(--ink);color:#fff;border-radius:14px;padding:16px 18px;font-size:.9rem;display:none;gap:14px;align-items:center;box-shadow:0 12px 30px -10px rgba(0,0,0,.5)}
+#cookie button{flex:none;border:none;border-radius:8px;padding:10px 16px;font-weight:600;cursor:pointer;background:#fff;color:var(--ink)}
+#cookie a,#cookie .linkbtn{color:#fff;margin:0}
+@media(max-width:1100px){nav{display:none}}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.shots{grid-template-columns:1fr}.shots figure:last-child:nth-child(odd){grid-column:auto}}
+@media(max-width:800px){header{display:none}}
+@media(max-width:600px){.cards,.steps{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr 1fr;gap:8px}.metrics b{font-size:1.3rem}#cookie{right:84px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<a href="#topo" class="logo">Gustavo Borges</a>
+<nav><a href="#resultados">Resultados</a><a href="#servicos">Serviços</a><a href="#processo">Como trabalho</a><a href="#prints">Campanhas</a><a href="#sobre">Sobre</a><a href="#duvidas">Perguntas frequentes</a></nav>
+<a class="btn wa" href="https://wa.me/5584986035247?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Chamar no WhatsApp</a>
+</div></header>
+<main id="topo">
+<section class="hero"><div class="wrap">
+<div>
+<h1>Mais contratos para o seu escritório, com custo por contrato que você acompanha.</h1>
+<p class="lead">Sou Gustavo Borges, gestor de tráfego para advogados. Planejo e otimizo campanhas no Meta Ads e Google Ads e acompanho cada lead até o seu WhatsApp, com relatório semanal.</p>
+<div class="actions"><a class="btn wa" href="https://wa.me/5584986035247?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Quero mais informações</a><a class="btn ghost" href="#resultados">Ver resultados</a></div>
+</div>
+<div class="panel">
+<img class="mini" src="foto.jpg" alt="Gustavo Borges" onerror="this.remove()">
+<div class="panel-top">Em 4 anos de tráfego pago</div>
+<div class="big">R$ 500 mil+</div>
+<div class="sub">em honorários contratados por escritórios de advocacia nas campanhas que gerenciei</div>
+<div class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+</div></section>
+
+<section id="resultados"><div class="wrap">
+<h2>Resultados</h2>
+<div class="cases">
+<article class="case">
+<div class="print"><span>Print do relatório do case</span><img src="NovoCase1.jpg" alt="Print do relatório do case" loading="lazy" decoding="async" onerror="this.remove()"></div>
+<span class="tag">Escritório de advocacia | Qualidade do lead</span>
+<h3>Poucos leads, contratos de alto valor</h3>
+<p>Foram 20 leads e 2 contratos, somando R$ 30.427,94 em honorários contratados, com ticket médio de R$ 15.213,97.</p>
+<div class="metrics"><div><b>R$ 258</b><span>custo por contrato</span></div><div><b>20</b><span>leads</span></div><div><b>2</b><span>contratos</span></div></div>
+</article>
+<article class="case">
+<div class="print"><span>Print do relatório do case</span><img src="NovoCase2.jpg" alt="Print do relatório do case" loading="lazy" decoding="async" onerror="this.remove()"></div>
+<span class="tag">Escritório de advocacia | Ajuste de público</span>
+<h3>Ajuste de público no meio da campanha</h3>
+<p>O cliente me contou que os contratos vinham de pessoas com menos de 30 anos, e a plataforma tinha diminuído a exibição dos anúncios para essa faixa etária. Reforcei a segmentação. Para cada R$ 1 investido, voltaram R$ 9,77 em honorários contratados, e o número chega a R$ 19,55 com os 2 contratos em análise.</p>
+<div class="metrics"><div><b>R$ 199</b><span>custo por contrato (R$ 99 com os 2 em análise)</span></div><div><b>36</b><span>leads</span></div><div><b>4</b><span>contratos (2 aprovados e 2 em análise)</span></div></div>
+</article>
+<article class="case">
+<div class="print"><span>Print do relatório do case</span><img src="NovoCase3.jpg" alt="Print do relatório do case" loading="lazy" decoding="async" onerror="this.remove()"></div>
+<span class="tag">Escritório de advocacia | Custo por contrato</span>
+<h3>Custo baixo por contrato</h3>
+<p>A campanha gerou 62 leads e 3 contratos fechados, com custo de R$ 55 por contrato. Com o ticket médio informado pelo cliente (R$ 3.500), o faturamento estimado é de R$ 10.500.</p>
+<div class="metrics"><div><b>R$ 55</b><span>custo por contrato</span></div><div><b>62</b><span>leads</span></div><div><b>3</b><span>contratos</span></div></div>
+</article>
+</div>
+<div class="cta"><a class="btn wa" href="https://wa.me/5584986035247?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Quero resultados assim</a></div></div></section>
+
+<section id="diferenciais"><div class="wrap">
+<h2>Por que trabalhar comigo</h2>
+<div class="cards">
+<div class="card"><h3>Número real, não só clique</h3><p>Peço ao cliente os contratos fechados e o ticket médio para calcular o retorno de cada real investido, o custo por contrato e quanto posso pagar por lead sem comprometer o seu retorno.</p></div>
+<div class="card"><h3>Acompanho cada lead até o WhatsApp</h3><p>Não paro no painel do anúncio. Pergunto como foram as conversas e qual o perfil de quem chega, e uso isso para ajustar público e criativo.</p></div>
+<div class="card"><h3>Ajuste rápido</h3><p>Quando a plataforma deixa de mostrar os anúncios para uma faixa etária que está fechando contratos, eu percebo, explico o motivo e corrijo a segmentação.</p></div>
+</div>
+</div></section>
+
+<section id="servicos"><div class="wrap">
+<h2>O que eu faço</h2>
+<div class="cards">
+<div class="card"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15 9a4 4 0 0 1 0 6"/></svg><h3>Gestão de campanhas</h3><p>Meta Ads e Google Ads, da estrutura à otimização diária, incluindo o Google Meu Negócio, com foco em custo por contrato e retorno.</p></div>
+<div class="card"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg><h3>Criativos</h3><p>Criação e teste contínuo de anúncios, textos e ofertas para descobrir o que faz seu público entrar em contato.</p></div>
+<div class="card"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 20V9"/></svg><h3>Landing pages</h3><p>Páginas pensadas para converter, analisadas com mapa de calor e ajustadas com base no comportamento dos visitantes.</p></div>
+<div class="card"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg><h3>Rastreamento</h3><p>Google Tag Manager, GA4 e API de Conversões configurados para você saber de onde vem cada lead.</p></div>
+<div class="card"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V4M4 20h16"/><path d="M8 16v-5M13 16V8M18 16v-9"/></svg><h3>Relatório semanal</h3><p>Toda semana: faturamento, investimento, leads, contratos, ticket médio, taxa de conversão, retorno sobre o investimento e custo por contrato.</p></div>
+<div class="card"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.7 7L4 20l1.2-4.6A8 8 0 1 1 21 12z"/></svg><h3>Suporte diário</h3><p>Acompanhamento direto no WhatsApp para tirar dúvidas e alinhar a qualidade dos leads que chegam.</p></div>
+</div>
+</div></section>
+
+<section id="processo"><div class="wrap">
+<h2>Como eu trabalho</h2>
+<ol class="steps">
+<li><h3>Diagnóstico</h3><p>Reunião inicial para entender quem você quer atender, seu produto, o que quer e o que não quer. Cruzo isso com o histórico de dados de outros projetos.</p></li>
+<li><h3>Estratégia e setup</h3><p>Defino o que será trabalhado, monto metas e estrutura de campanhas e configuro todo o rastreamento.</p></li>
+<li><h3>Lançamento e testes</h3><p>Subo as campanhas e testo criativos, públicos e ofertas, levando em conta a sazonalidade do seu mercado.</p></li>
+<li><h3>Otimização e escala</h3><p>Corto o que não performa e aumento a verba no que dá retorno, para crescer os honorários com segurança.</p></li>
+<li><h3>Acompanhamento contínuo</h3><p>Conversa diária no WhatsApp e relatório semanal com os números da campanha.</p></li>
+</ol>
+</div></section>
+
+<section id="depoimentos"><div class="wrap">
+<h2>O que dizem os clientes</h2>
+<div class="quotes">
+<blockquote>“Estão sendo mais produtivas as conversas.”<cite>Cliente, escritório de advocacia</cite></blockquote>
+<blockquote>“Consegui fechar três contratos de ontem para hoje.”<cite>Cliente, escritório de advocacia</cite></blockquote>
+<blockquote>“Fechei mais 3 contratos essa semana.”<cite>Cliente, escritório de advocacia</cite></blockquote>
+</div>
+<div class="depos" id="depos" tabindex="0" aria-label="Prints de conversas com clientes">
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo1.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo2.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo3.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo4.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo5.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo6.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo7.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo8.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo9.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
+</div>
+<div class="car-nav"><button id="prev" type="button" aria-label="Anteriores">‹</button><span id="pos" aria-live="polite"></span><button id="next" type="button" aria-label="Próximos">›</button></div>
+<div class="cta"><a class="btn wa" href="https://wa.me/5584986035247?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Falar no WhatsApp</a></div></div></section>
+
+<section id="prints"><div class="wrap">
+<h2>Campanhas lucrativas reais</h2>
+<p class="lead" style="margin:-12px 0 32px">Campanhas reais no Google Ads e no Meta Ads, para escritórios de diferentes áreas do direito. Em cada print você vê quanto foi investido e quanto custou cada contato gerado. Clique para ampliar.</p>
+<h3 class="gt">Google Ads</h3>
+<div class="shots">
+<figure><div class="print"><span>Print de resultado 1</span><img src="resultado1.jpg" alt="Print de resultado 1" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 455,61</b> | 70 conversões | R$ 6,51 por conversão</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 2</span><img src="resultado2.jpg" alt="Print de resultado 2" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 811,37</b> | 94 conversões | R$ 8,63 por conversão</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 3</span><img src="resultado3.jpg" alt="Print de resultado 3" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 632,51</b> | 92 conversões | R$ 6,88 por conversão</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 4</span><img src="resultado4.jpg" alt="Print de resultado 4" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 725,55</b> | 50 conversões | R$ 14,51 por conversão</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 11</span><img src="resultado11.jpg" alt="Print de resultado 11" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 1.000,79</b> | 79 conversões | R$ 12,67 por conversão</figcaption></figure>
+</div>
+<h3 class="gt">Meta Ads</h3>
+<div class="shots">
+<figure><div class="print"><span>Print de resultado 5</span><img src="resultado5.jpg" alt="Print de resultado 5" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 445,76</b> | 41 conversas por mensagem | R$ 10,87 por conversa</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 6</span><img src="resultado6.jpg" alt="Print de resultado 6" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 397,56</b> | 64 leads de formulário | R$ 6,21 por lead</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 7</span><img src="resultado7.jpg" alt="Print de resultado 7" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 349,83</b> | 91 leads de formulário | R$ 3,84 por lead</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 8</span><img src="resultado8.jpg" alt="Print de resultado 8" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 807,46 em 3 conjuntos</b> | 138 leads de formulário | R$ 5,85 por lead</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 9</span><img src="resultado9.jpg" alt="Print de resultado 9" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 456,09</b> | 113 leads de formulário | R$ 4,04 por lead</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 10</span><img src="resultado10.jpg" alt="Print de resultado 10" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 783,66</b> | 117 conversas por mensagem | R$ 6,70 por conversa</figcaption></figure>
+</div>
+<div class="cta"><a class="btn wa" href="https://wa.me/5584986035247?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Quero campanhas assim</a></div></div></section>
+
+<section id="sobre"><div class="wrap about">
+<div class="print"><span>Sua foto aqui</span><img src="foto.jpg" alt="Sua foto aqui" loading="lazy" decoding="async" onerror="this.remove()"></div>
+<div>
+<h2>Sobre mim</h2>
+<p>Há 4 anos trabalho com tráfego pago, e hoje atendo escritórios de advocacia em todo o Brasil. Passei por uma agência, onde atuei em onboarding, estratégia, otimização e análise de landing page com mapa de calor.</p>
+<p>Antes disso, aprendi tráfego na prática: investindo dinheiro meu em anúncios, errando, ajustando e tentando de novo. Esses testes ensinaram mais do que qualquer curso.</p>
+<p>Foi ali que percebi que o resultado de verdade não aparece no painel, aparece na conversa com o cliente final. Por isso acompanho o lead até o seu WhatsApp e trabalho com dados claros: você sempre sabe o que está funcionando, o que não está e quanto custa cada venda.</p>
+<p>Trabalho conforme as regras de publicidade da advocacia da OAB (Provimento nº 205/2021).</p>
+<h3>Certificações</h3>
+<div class="chips"><span>Certificação Meta Blueprint</span><span>Certificação Google Ads</span></div>
+<h3>Ferramentas</h3>
+<div class="chips"><span>Google Analytics</span><span>Google Tag Manager</span><span>Microsoft Clarity</span><span>API de Conversões</span></div>
+<div class="cta"><a class="btn wa" href="https://wa.me/5584986035247?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Falar comigo no WhatsApp</a></div>
+</div>
+</div></section>
+
+<section id="duvidas"><div class="wrap">
+<h2>Perguntas frequentes</h2>
+<details open><summary>Você atende qualquer área do direito?</summary><p>Já atendi escritórios de áreas diferentes, como família, bancário, previdenciário e consumidor, e a lógica do método é a mesma. Na reunião de diagnóstico eu avalio se a sua área e a sua região têm potencial antes de começarmos.</p></details>
+<details><summary>Quanto custa o serviço?</summary><p>Cada projeto tem um orçamento próprio, definido de acordo com o número de plataformas e com o que você precisa (campanhas, criativos, landing page). Chame no WhatsApp e eu passo o valor.</p></details>
+<details><summary>Quanto preciso investir em anúncios?</summary><p>A verba de anúncio é separada do meu serviço e paga direto às plataformas. O valor ideal depende da sua área, da sua região e da sua meta, e definimos isso no diagnóstico.</p></details>
+<details><summary>Como vou acompanhar os resultados?</summary><p>Você recebe um relatório semanal com os principais números e tem acompanhamento diário pelo WhatsApp. Também olho a qualidade dos leads, não só os números da plataforma.</p></details>
+<details><summary>Em quanto tempo aparecem os resultados?</summary><p>Em alguns projetos já chegaram conversas e contratos na primeira semana, mas isso depende da área, da oferta e da verba. O ganho maior vem dos testes e da otimização contínua.</p></details>
+<details><summary>Você garante resultado?</summary><p>O resultado depende de fatores como área, região e oferta, por isso eu não prometo números. O que eu garanto é método, transparência nos números e relatório semanal para você decidir com dados.</p></details>
+<details><summary>Segue as regras da OAB?</summary><p>Sim. Os anúncios seguem as regras de publicidade da advocacia da OAB (Provimento nº 205/2021), e eu não prometo resultado.</p></details>
+<details><summary>As contas de anúncio ficam no meu nome?</summary><p>Sim. As contas de anúncio e os dados ficam com você, e eu atuo como gestor, com acesso a elas.</p></details>
+<details><summary>Preciso ter site ou landing page?</summary><p>Não necessariamente. Se você já tem uma página, eu analiso e sugiro ajustes. Se não tem, eu crio uma landing page focada em conversão.</p></details>
+</div></section>
+
+<section id="contato"><div class="wrap">
+<div class="contact">
+<h2>Vamos colocar sua verba para render?</h2>
+<p>Me chame no WhatsApp, conte sobre o seu escritório e eu respondo com os próximos passos.</p>
+<a class="btn wa" href="https://wa.me/5584986035247?text=Ol%C3%A1%2C%20Gustavo%21%20Vi%20seu%20site%20e%20tenho%20um%20escrit%C3%B3rio%20de%20advocacia.%20Gostaria%20de%20saber%20como%20funciona%20o%20seu%20trabalho.%20Minha%20%C3%A1rea%20de%20atua%C3%A7%C3%A3o%20%C3%A9%3A%20" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+<div class="alt"><a href="https://www.linkedin.com/in/gustavo-borges-5b415b252/" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:gustavoborges0292@gmail.com">E-mail</a></div>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">© <span id="ano">2026</span> Gustavo Borges | CNPJ 61.649.774/0001-32 | Atendimento online em todo o Brasil<br><button type="button" class="linkbtn" id="openPriv">Política de privacidade</button></div></footer>
+<a class="wa-float" href="https://wa.me/5584986035247?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Chamar no WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.04 3C9.4 3 4 8.4 4 15.03c0 2.12.55 4.19 1.6 6.01L4 29l8.14-1.56a12.03 12.03 0 0 0 3.9.65h.01C22.68 28.09 28 22.69 28 16.06 28 9.4 22.68 3 16.04 3zm0 22.07h-.01c-1.2 0-2.37-.32-3.4-.93l-.24-.15-4.83.93.96-4.7-.16-.25a9.9 9.9 0 0 1-1.52-5.24c0-5.5 4.5-9.97 10.03-9.97 5.52 0 10.01 4.47 10.01 9.98 0 5.5-4.5 10.33-10.04 10.33zm5.5-7.46c-.3-.15-1.78-.88-2.06-.98-.28-.1-.48-.15-.68.15-.2.3-.78.98-.95 1.18-.18.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.67-2.08-.18-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.25-.25-.58-.5-.5-.68-.51h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.03-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.1 3.2 5.08 4.5.7.3 1.26.48 1.7.62.72.23 1.36.2 1.88.12.57-.08 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.08-.13-.28-.2-.58-.35z"/></svg></a>
+<dialog id="zoom"><img alt=""><button class="zbtn zprev" type="button" aria-label="Anterior">‹</button><button class="zbtn znext" type="button" aria-label="Próxima">›</button><div class="zcap"></div></dialog>
+<dialog id="priv"><h2>Política de Privacidade</h2>
+<p>Este site é de responsabilidade de Gustavo Borges (CNPJ 61.649.774/0001-32). Contato: gustavoborges0292@gmail.com.</p>
+<p><b>Dados coletados.</b> O site não tem formulários, não usa cookies de publicidade nem ferramentas de análise ou rastreamento. Ao abrir a página, as fontes são carregadas do Google Fonts e a hospedagem (GitHub Pages) pode registrar o endereço IP do visitante, conforme as políticas desses serviços.</p>
+<p><b>Contato por WhatsApp.</b> Os botões levam você ao WhatsApp. Os dados que você enviar lá (nome, número e mensagem) são usados apenas para responder ao seu contato e apresentar a proposta de serviço, conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018). Não vendo nem compartilho esses dados.</p>
+<p><b>Seus direitos.</b> Você pode pedir acesso, correção ou exclusão dos seus dados pelo e-mail acima.</p>
+<p><b>Cookies.</b> O site guarda apenas um registro local no seu navegador para lembrar que você viu o aviso de cookies.</p>
+<button class="btn" type="button" id="closePriv">Fechar</button></dialog>
+<div id="cookie" role="region" aria-label="Aviso de cookies"><span>Este site não usa cookies de publicidade nem de rastreamento. Veja a <button type="button" class="linkbtn" id="cookiePriv">Política de Privacidade</button>.</span><button type="button" id="cookieOk">Entendi</button></div>
+<script>
+const z=document.getElementById('zoom'),zi=z.querySelector('img'),zc=z.querySelector('.zcap');let g=[],gi=0;
+function show(){const p=g[gi],i=p.querySelector('img'),f=p.closest('figure'),c=f&&f.querySelector('figcaption');zi.src=i.src;zi.alt=i.alt;zc.textContent=c?c.textContent:''}
+function go(d){gi=(gi+d+g.length)%g.length;show()}
+document.querySelectorAll('.print').forEach(p=>p.addEventListener('click',()=>{if(!p.querySelector('img'))return;const r=p.closest('.shots,.depos,.cases');if(!r)return;g=[...r.querySelectorAll('.print')].filter(x=>x.querySelector('img'));gi=g.indexOf(p);show();z.showModal()}));
+z.querySelector('.zprev').addEventListener('click',e=>{e.stopPropagation();go(-1)});
+z.querySelector('.znext').addEventListener('click',e=>{e.stopPropagation();go(1)});
+z.addEventListener('click',()=>z.close());
+document.addEventListener('keydown',e=>{if(!z.open)return;if(e.key==='ArrowLeft')go(-1);if(e.key==='ArrowRight')go(1)});
+const d=document.getElementById('depos'),pv=document.getElementById('prev'),nx=document.getElementById('next'),ps=document.getElementById('pos');
+function view(){return window.innerWidth>800?3:1}
+function step(){const c=d.children[0];return c?c.offsetWidth+20:1}
+function upd(){const n=d.children.length,v=view(),i=Math.round(d.scrollLeft/step());ps.textContent=(i+1)+(v>1?'–'+Math.min(i+v,n):'')+' de '+n;pv.disabled=i<=0;nx.disabled=i+v>=n}
+pv.addEventListener('click',()=>d.scrollBy({left:-step()*view()}));
+nx.addEventListener('click',()=>d.scrollBy({left:step()*view()}));
+d.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();
+const pr=document.getElementById('priv'),ck=document.getElementById('cookie');
+function openP(){pr.showModal()}
+document.getElementById('openPriv').addEventListener('click',openP);
+document.getElementById('cookiePriv').addEventListener('click',openP);
+document.getElementById('closePriv').addEventListener('click',()=>pr.close());
+let seen=false;try{seen=localStorage.getItem('cookie-ok')==='1'}catch(e){}
+if(!seen)ck.style.display='flex';
+document.getElementById('cookieOk').addEventListener('click',()=>{ck.style.display='none';try{localStorage.setItem('cookie-ok','1')}catch(e){}});
+document.getElementById('ano').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
