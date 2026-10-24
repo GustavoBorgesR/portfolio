@@ -163,12 +163,16 @@ dialog img{max-height:84vh}
 #priv button{margin-top:8px;cursor:pointer;border:none}
 #cookie{position:fixed;left:16px;right:16px;bottom:16px;max-width:560px;z-index:8;background:var(--ink);color:#fff;border-radius:14px;padding:16px 18px;font-size:.9rem;display:none;gap:14px;align-items:center;box-shadow:0 12px 30px -10px rgba(0,0,0,.5)}
 #cookie button{flex:none;border:none;border-radius:8px;padding:10px 16px;font-weight:600;cursor:pointer;background:#fff;color:var(--ink)}
-#cookie a,#cookie .linkbtn{color:#fff;margin:0}
+#cookie .linkbtn{background:none;border-radius:0;padding:0;margin:0;font-weight:inherit;color:#fff;text-decoration:underline;display:inline}
 @media(max-width:1100px){nav{display:none}}
 @media(max-width:900px){.cards{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.shots{grid-template-columns:1fr}.shots figure:last-child:nth-child(odd){grid-column:auto}}
 @media(max-width:800px){header{display:none}}
 @media(max-width:600px){.cards,.steps{grid-template-columns:1fr}.metrics{grid-template-columns:1fr 1fr 1fr;gap:8px}.metrics b{font-size:1.3rem}#cookie{right:84px}}
 </style>
+<script>
+var EXT=['jpg','jpeg','png','webp','JPG','JPEG','PNG','WEBP'];
+function imgNext(i){var b=i.dataset.b||i.getAttribute('src').replace(/\.[^.\/]+$/,'');i.dataset.b=b;var k=+(i.dataset.k||0)+1;i.dataset.k=k;if(k<EXT.length){i.src=b+'.'+EXT[k]}else{i.remove()}}
+</script>
 </head>
 <body>
 <header><div class="wrap">
@@ -184,7 +188,7 @@ dialog img{max-height:84vh}
 <div class="actions"><a class="btn wa" href="https://wa.me/5584986035247?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Quero mais informações</a><a class="btn ghost" href="#resultados">Ver resultados</a></div>
 </div>
 <div class="panel">
-<img class="mini" src="foto.jpg" alt="Gustavo Borges" onerror="this.remove()">
+<img class="mini" src="foto.jpg" alt="Gustavo Borges" onerror="imgNext(this)">
 <div class="panel-top">Em 4 anos de tráfego pago</div>
 <div class="big">R$ 500 mil+</div>
 <div class="sub">em honorários contratados por escritórios de advocacia nas campanhas que gerenciei</div>
@@ -196,24 +200,24 @@ dialog img{max-height:84vh}
 <h2>Resultados</h2>
 <div class="cases">
 <article class="case">
-<div class="print"><span>Print do relatório do case</span><img src="NovoCase1.jpg" alt="Print do relatório do case" loading="lazy" decoding="async" onerror="this.remove()"></div>
-<span class="tag">Escritório de advocacia | Qualidade do lead</span>
+<div class="print"><span>Print do relatório do case</span><img src="NovoCase1.jpg" alt="Print do relatório do case" loading="lazy" decoding="async" onerror="imgNext(this)"></div>
+<span class="tag">Advogado Criminal | SP</span>
 <h3>Poucos leads, contratos de alto valor</h3>
-<p>Foram 20 leads e 2 contratos, somando R$ 30.427,94 em honorários contratados, com ticket médio de R$ 15.213,97.</p>
+<p>Foram 20 leads e 2 contratos, somando R$ 30.427,94 em honorários contratados, com ticket médio de R$ 15.213,97. A taxa de conversão foi de 10%: de cada 10 pessoas que entraram em contato, 1 fechou contrato.</p>
 <div class="metrics"><div><b>R$ 258</b><span>custo por contrato</span></div><div><b>20</b><span>leads</span></div><div><b>2</b><span>contratos</span></div></div>
 </article>
 <article class="case">
-<div class="print"><span>Print do relatório do case</span><img src="NovoCase2.jpg" alt="Print do relatório do case" loading="lazy" decoding="async" onerror="this.remove()"></div>
-<span class="tag">Escritório de advocacia | Ajuste de público</span>
-<h3>Ajuste de público no meio da campanha</h3>
-<p>O cliente me contou que os contratos vinham de pessoas com menos de 30 anos, e a plataforma tinha diminuído a exibição dos anúncios para essa faixa etária. Reforcei a segmentação. Para cada R$ 1 investido, voltaram R$ 9,77 em honorários contratados, e o número chega a R$ 19,55 com os 2 contratos em análise.</p>
+<div class="print"><span>Print do relatório do case</span><img src="NovoCase2.jpg" alt="Print do relatório do case" loading="lazy" decoding="async" onerror="imgNext(this)"></div>
+<span class="tag">Advogado Previdenciário | RJ</span>
+<h3>R$ 9,77 de retorno para cada R$ 1 investido</h3>
+<p>Para cada R$ 1 investido, voltaram R$ 9,77 em honorários contratados, e o número chega a R$ 19,55 com os 2 contratos em análise.</p>
 <div class="metrics"><div><b>R$ 199</b><span>custo por contrato (R$ 99 com os 2 em análise)</span></div><div><b>36</b><span>leads</span></div><div><b>4</b><span>contratos (2 aprovados e 2 em análise)</span></div></div>
 </article>
 <article class="case">
-<div class="print"><span>Print do relatório do case</span><img src="NovoCase3.jpg" alt="Print do relatório do case" loading="lazy" decoding="async" onerror="this.remove()"></div>
-<span class="tag">Escritório de advocacia | Custo por contrato</span>
+<div class="print"><span>Print do relatório do case</span><img src="NovoCase3.jpg" alt="Print do relatório do case" loading="lazy" decoding="async" onerror="imgNext(this)"></div>
+<span class="tag">Advogado Consumidor | MG</span>
 <h3>Custo baixo por contrato</h3>
-<p>A campanha gerou 62 leads e 3 contratos fechados, com custo de R$ 55 por contrato. Com o ticket médio informado pelo cliente (R$ 3.500), o faturamento estimado é de R$ 10.500.</p>
+<p>A campanha gerou 62 leads e 3 contratos fechados. O CAC, que é o custo para conquistar cada cliente, foi de R$ 55: para cada contrato fechado, foram R$ 55 investidos em anúncios. Com o ticket médio informado pelo cliente (R$ 3.500), o faturamento estimado é de R$ 10.500.</p>
 <div class="metrics"><div><b>R$ 55</b><span>custo por contrato</span></div><div><b>62</b><span>leads</span></div><div><b>3</b><span>contratos</span></div></div>
 </article>
 </div>
@@ -254,20 +258,20 @@ dialog img{max-height:84vh}
 <section id="depoimentos"><div class="wrap">
 <h2>O que dizem os clientes</h2>
 <div class="quotes">
-<blockquote>“Estão sendo mais produtivas as conversas.”<cite>Cliente, escritório de advocacia</cite></blockquote>
-<blockquote>“Consegui fechar três contratos de ontem para hoje.”<cite>Cliente, escritório de advocacia</cite></blockquote>
-<blockquote>“Fechei mais 3 contratos essa semana.”<cite>Cliente, escritório de advocacia</cite></blockquote>
+<blockquote>“Estão sendo mais produtivas as conversas.”<cite>Advogado Bancário | MT</cite></blockquote>
+<blockquote>“Consegui fechar três contratos de ontem para hoje.”<cite>Advogado Imobiliário | RS</cite></blockquote>
+<blockquote>“Fechei mais 3 contratos essa semana.”<cite>Advogado Previdenciário | BA</cite></blockquote>
 </div>
 <div class="depos" id="depos" tabindex="0" aria-label="Prints de conversas com clientes">
-<div class="print"><span>Print de conversa com cliente</span><img src="ndepo1.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
-<div class="print"><span>Print de conversa com cliente</span><img src="ndepo2.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
-<div class="print"><span>Print de conversa com cliente</span><img src="ndepo3.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
-<div class="print"><span>Print de conversa com cliente</span><img src="ndepo4.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
-<div class="print"><span>Print de conversa com cliente</span><img src="ndepo5.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
-<div class="print"><span>Print de conversa com cliente</span><img src="ndepo6.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
-<div class="print"><span>Print de conversa com cliente</span><img src="ndepo7.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
-<div class="print"><span>Print de conversa com cliente</span><img src="ndepo8.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
-<div class="print"><span>Print de conversa com cliente</span><img src="ndepo9.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="this.remove()"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo1.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="imgNext(this)"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo2.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="imgNext(this)"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo3.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="imgNext(this)"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo4.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="imgNext(this)"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo5.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="imgNext(this)"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo6.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="imgNext(this)"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo7.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="imgNext(this)"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo8.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="imgNext(this)"></div>
+<div class="print"><span>Print de conversa com cliente</span><img src="ndepo9.jpg" alt="Print de conversa com cliente" loading="lazy" decoding="async" onerror="imgNext(this)"></div>
 </div>
 <div class="car-nav"><button id="prev" type="button" aria-label="Anteriores">‹</button><span id="pos" aria-live="polite"></span><button id="next" type="button" aria-label="Próximos">›</button></div>
 <div class="cta"><a class="btn wa" href="https://wa.me/5584986035247?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Falar no WhatsApp</a></div></div></section>
@@ -277,25 +281,25 @@ dialog img{max-height:84vh}
 <p class="lead" style="margin:-12px 0 32px">Campanhas reais no Google Ads e no Meta Ads, para escritórios de diferentes áreas do direito. Em cada print você vê quanto foi investido e quanto custou cada contato gerado. Clique para ampliar.</p>
 <h3 class="gt">Google Ads</h3>
 <div class="shots">
-<figure><div class="print"><span>Print de resultado 1</span><img src="resultado1.jpg" alt="Print de resultado 1" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 455,61</b> | 70 conversões | R$ 6,51 por conversão</figcaption></figure>
-<figure><div class="print"><span>Print de resultado 2</span><img src="resultado2.jpg" alt="Print de resultado 2" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 811,37</b> | 94 conversões | R$ 8,63 por conversão</figcaption></figure>
-<figure><div class="print"><span>Print de resultado 3</span><img src="resultado3.jpg" alt="Print de resultado 3" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 632,51</b> | 92 conversões | R$ 6,88 por conversão</figcaption></figure>
-<figure><div class="print"><span>Print de resultado 4</span><img src="resultado4.jpg" alt="Print de resultado 4" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 725,55</b> | 50 conversões | R$ 14,51 por conversão</figcaption></figure>
-<figure><div class="print"><span>Print de resultado 11</span><img src="resultado11.jpg" alt="Print de resultado 11" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 1.000,79</b> | 79 conversões | R$ 12,67 por conversão</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 1</span><img src="resultado1.jpg" alt="Print de resultado 1" loading="lazy" decoding="async" onerror="imgNext(this)"></div><figcaption><b>Investido R$ 455,61</b> | 70 conversões | R$ 6,51 por conversão</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 2</span><img src="resultado2.jpg" alt="Print de resultado 2" loading="lazy" decoding="async" onerror="imgNext(this)"></div><figcaption><b>Investido R$ 811,37</b> | 94 conversões | R$ 8,63 por conversão</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 3</span><img src="resultado3.jpg" alt="Print de resultado 3" loading="lazy" decoding="async" onerror="imgNext(this)"></div><figcaption><b>Investido R$ 632,51</b> | 92 conversões | R$ 6,88 por conversão</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 4</span><img src="resultado4.jpg" alt="Print de resultado 4" loading="lazy" decoding="async" onerror="imgNext(this)"></div><figcaption><b>Investido R$ 725,55</b> | 50 conversões | R$ 14,51 por conversão</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 11</span><img src="resultado11.jpg" alt="Print de resultado 11" loading="lazy" decoding="async" onerror="imgNext(this)"></div><figcaption><b>Investido R$ 1.000,79</b> | 79 conversões | R$ 12,67 por conversão</figcaption></figure>
 </div>
 <h3 class="gt">Meta Ads</h3>
 <div class="shots">
-<figure><div class="print"><span>Print de resultado 5</span><img src="resultado5.jpg" alt="Print de resultado 5" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 445,76</b> | 41 conversas por mensagem | R$ 10,87 por conversa</figcaption></figure>
-<figure><div class="print"><span>Print de resultado 6</span><img src="resultado6.jpg" alt="Print de resultado 6" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 397,56</b> | 64 leads de formulário | R$ 6,21 por lead</figcaption></figure>
-<figure><div class="print"><span>Print de resultado 7</span><img src="resultado7.jpg" alt="Print de resultado 7" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 349,83</b> | 91 leads de formulário | R$ 3,84 por lead</figcaption></figure>
-<figure><div class="print"><span>Print de resultado 8</span><img src="resultado8.jpg" alt="Print de resultado 8" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 807,46 em 3 conjuntos</b> | 138 leads de formulário | R$ 5,85 por lead</figcaption></figure>
-<figure><div class="print"><span>Print de resultado 9</span><img src="resultado9.jpg" alt="Print de resultado 9" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 456,09</b> | 113 leads de formulário | R$ 4,04 por lead</figcaption></figure>
-<figure><div class="print"><span>Print de resultado 10</span><img src="resultado10.jpg" alt="Print de resultado 10" loading="lazy" decoding="async" onerror="this.remove()"></div><figcaption><b>Investido R$ 783,66</b> | 117 conversas por mensagem | R$ 6,70 por conversa</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 5</span><img src="resultado5.jpg" alt="Print de resultado 5" loading="lazy" decoding="async" onerror="imgNext(this)"></div><figcaption><b>Investido R$ 445,76</b> | 41 conversas por mensagem | R$ 10,87 por conversa</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 6</span><img src="resultado6.jpg" alt="Print de resultado 6" loading="lazy" decoding="async" onerror="imgNext(this)"></div><figcaption><b>Investido R$ 397,56</b> | 64 leads de formulário | R$ 6,21 por lead</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 7</span><img src="resultado7.jpg" alt="Print de resultado 7" loading="lazy" decoding="async" onerror="imgNext(this)"></div><figcaption><b>Investido R$ 349,83</b> | 91 leads de formulário | R$ 3,84 por lead</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 8</span><img src="resultado8.jpg" alt="Print de resultado 8" loading="lazy" decoding="async" onerror="imgNext(this)"></div><figcaption><b>Investido R$ 807,46 em 3 conjuntos</b> | 138 leads de formulário | R$ 5,85 por lead</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 9</span><img src="resultado9.jpg" alt="Print de resultado 9" loading="lazy" decoding="async" onerror="imgNext(this)"></div><figcaption><b>Investido R$ 456,09</b> | 113 leads de formulário | R$ 4,04 por lead</figcaption></figure>
+<figure><div class="print"><span>Print de resultado 10</span><img src="resultado10.jpg" alt="Print de resultado 10" loading="lazy" decoding="async" onerror="imgNext(this)"></div><figcaption><b>Investido R$ 783,66</b> | 117 conversas por mensagem | R$ 6,70 por conversa</figcaption></figure>
 </div>
 <div class="cta"><a class="btn wa" href="https://wa.me/5584986035247?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Quero campanhas assim</a></div></div></section>
 
 <section id="sobre"><div class="wrap about">
-<div class="print"><span>Sua foto aqui</span><img src="foto.jpg" alt="Sua foto aqui" loading="lazy" decoding="async" onerror="this.remove()"></div>
+<div class="print"><span>Sua foto aqui</span><img src="foto.jpg" alt="Sua foto aqui" loading="lazy" decoding="async" onerror="imgNext(this)"></div>
 <div>
 <h2>Sobre mim</h2>
 <p>Há 4 anos trabalho com tráfego pago, e hoje atendo escritórios de advocacia em todo o Brasil. Passei por uma agência, onde atuei em onboarding, estratégia, otimização e análise de landing page com mapa de calor.</p>
