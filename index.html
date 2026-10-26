@@ -176,6 +176,12 @@ dialog img{max-height:84vh}
 .metrics>div{grid-template-columns:92px 1fr;align-items:center;gap:10px;min-height:38px}
 .metrics b{font-size:1.35rem;line-height:1}
 .metrics span{font-size:.92rem;line-height:1.3}
+.cert{margin:16px 0 0;max-width:380px}
+.cert .print{aspect-ratio:auto;display:block;padding:0;background:#fff;border:1px solid var(--line)}
+.cert .print img{position:static;display:block;width:100%;height:auto}
+.cert .print:has(img) span{display:none}
+.cert .print:not(:has(img)){aspect-ratio:4/3;display:grid;padding:12px}
+.cert figcaption{font-size:.88rem;color:var(--muted);margin-top:8px}
 </style>
 <script>
 var EXT=['jpg','jpeg','png','webp','JPG','JPEG','PNG','WEBP'];
@@ -316,6 +322,7 @@ function imgNext(i){var b=i.dataset.b||i.getAttribute('src').replace(/\.[^.\/]+$
 <p>Trabalho conforme as regras de publicidade da advocacia da OAB (Provimento nº 205/2021).</p>
 <h3>Certificações</h3>
 <div class="chips"><span>Certificação Meta Blueprint</span><span>Certificação Google Ads</span></div>
+<figure class="cert"><div class="print"><span>Certificado Google Ads</span><img src="certificado-google-ads.jpg" alt="Certificado Google Ads de Gustavo Borges" loading="lazy" decoding="async" onerror="imgNext(this)"></div><figcaption>Certificação Google Ads</figcaption></figure>
 <h3>Ferramentas</h3>
 <div class="chips"><span>Google Analytics</span><span>Google Tag Manager</span><span>Microsoft Clarity</span><span>API de Conversões</span></div>
 <div class="cta"><a class="btn wa" href="https://wa.me/5584986035247?text=Ol%C3%A1!%20Vi%20seu%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">Falar comigo no WhatsApp</a></div>
@@ -359,7 +366,7 @@ function imgNext(i){var b=i.dataset.b||i.getAttribute('src').replace(/\.[^.\/]+$
 const z=document.getElementById('zoom'),zi=z.querySelector('img'),zc=z.querySelector('.zcap');let g=[],gi=0;
 function show(){const p=g[gi],i=p.querySelector('img'),f=p.closest('figure'),c=f&&f.querySelector('figcaption');zi.src=i.src;zi.alt=i.alt;zc.textContent=c?c.textContent:''}
 function go(d){gi=(gi+d+g.length)%g.length;show()}
-document.querySelectorAll('.print').forEach(p=>p.addEventListener('click',()=>{if(!p.querySelector('img'))return;const r=p.closest('.shots,.depos,.cases');if(!r)return;g=[...r.querySelectorAll('.print')].filter(x=>x.querySelector('img'));gi=g.indexOf(p);show();z.showModal()}));
+document.querySelectorAll('.print').forEach(p=>p.addEventListener('click',()=>{if(!p.querySelector('img'))return;const r=p.closest('.shots,.depos,.cases,.cert');if(!r)return;g=[...r.querySelectorAll('.print')].filter(x=>x.querySelector('img'));gi=g.indexOf(p);show();z.showModal()}));
 z.querySelector('.zprev').addEventListener('click',e=>{e.stopPropagation();go(-1)});
 z.querySelector('.znext').addEventListener('click',e=>{e.stopPropagation();go(1)});
 z.addEventListener('click',()=>z.close());
@@ -383,4 +390,3 @@ document.getElementById('ano').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
-
